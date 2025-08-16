@@ -6,7 +6,10 @@ import os
 
 load_dotenv()
 
-llm = ChatOpenAI(model="gpt-4o", temperature=0.5)
+
+api_key = os.environ.get("OPENAI_API_KEY")
+llm = ChatOpenAI(model_name="gpt-4o-mini",
+                 temperature=0.5, openai_api_key=api_key)
 
 st.title("課題用フォームの作成webアプリ")
 st.write("このアプリは、OpenAIのAPIを使用して、課題用のフォームを作成するためのものです。")
