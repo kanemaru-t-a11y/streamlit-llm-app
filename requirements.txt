@@ -12,6 +12,7 @@ charset-normalizer==3.4.3
 click==8.2.1
 colorama==0.4.6
 dataclasses-json==0.6.7
+distro==1.9.0
 frozenlist==1.7.0
 gitdb==4.0.12
 GitPython==3.1.45
@@ -22,6 +23,7 @@ httpx==0.28.1
 httpx-sse==0.4.1
 idna==3.10
 Jinja2==3.1.6
+jiter==0.10.0
 jsonpatch==1.33
 jsonpointer==3.0.0
 jsonschema==4.25.0
@@ -39,6 +41,7 @@ multidict==6.6.4
 mypy_extensions==1.1.0
 narwhals==2.1.2
 numpy==2.3.2
+openai==1.99.9
 orjson==3.11.2
 packaging==24.2
 pandas==2.3.1
@@ -68,6 +71,7 @@ streamlit==1.41.1
 tenacity==9.1.2
 toml==0.10.2
 tornado==6.5.2
+tqdm==4.67.1
 typing-inspect==0.9.0
 typing-inspection==0.4.1
 typing_extensions==4.14.1
