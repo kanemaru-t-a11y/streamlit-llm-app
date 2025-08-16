@@ -1,10 +1,7 @@
-from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 import streamlit as st
 import os
-
-load_dotenv()
 
 
 api_key = os.environ.get("OPENAI_API_KEY")
@@ -23,9 +20,9 @@ input_text = st.text_input(label=f"{selected_item}に関する情報を入力し
 
 def get_ai_response(selected_item, input_text):
     role_dict = {  # 選択肢ごとにAIの役割を指定する辞書
-        "ITの専門家": "あなたはITの専門家です。",
-        "料理の専門家": "あなたは料理の専門家です。",
-        "数学の専門家": "あなたは数学の専門家です。"
+        "料理の専門家": "あなたは料理の専門家です。料理以外の質問には答えず、「料理以外の質問には答えられません」と返答してください。",
+        "ITの専門家": "あなたはITの専門家です。IT以外の質問には答えないでください。",
+        "数学の専門家": "あなたは数学の専門家です。数学以外の質問には答えないでください。"
     }
     messages = [
         SystemMessage(content=role_dict[selected_item]),
